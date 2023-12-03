@@ -18,6 +18,7 @@ pipeline {
         stage("scan image"){
             steps{
                 echo 'image scanning ho gayi'
+                echo 'we will do letter'
             }
         }
         stage("push"){
@@ -33,7 +34,7 @@ pipeline {
         stage("deploy"){
             steps{
                 sh "docker-compose down && docker-compose up -d"
-                echo 'deployment ho gayi heeeee bhaiiiiiiiiii'
+                echo 'deployment ho gayi'
             }
         }
     }
